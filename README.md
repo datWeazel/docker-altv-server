@@ -19,7 +19,7 @@ The unofficial alt:V server Docker image.
 To get started just run the Docker image as follows:
 
 ```sh
-docker run -it --rm eisengrind/altv-server:release
+docker run -it --rm datweazel/altv-server:release
 ```
 
 ### Configuring the alt:V server
@@ -42,7 +42,7 @@ For the `$build` and `$branch` variables you have to enter the regarding alt:V v
 
 To use custom vehicle data, you can mount a volume to the directory `/opt/altv/data/`. By using the volume you can then overwrite the `vehmodels.bin` and `vehmods.bin` files.
 
-You ofc also can just copy the vehicle data to a new `Dockerfile` that inherits from the base `eisengrind/altv-server` image.
+You ofc also can just copy the vehicle data to a new `Dockerfile` that inherits from the base `datweazel/altv-server` image.
 
 ## Usage with a custom Dockerfile
 
@@ -51,7 +51,7 @@ Most of the time if you are using containers, especially images, correctly, you 
 You can use this images as a base for your future customizations:
 
 ```Dockerfile
-FROM eisengrind/altv-server:release
+FROM datweazel/altv-server:release
 
 RUN mkdir -p /opt/altv/resources/test-resource
 ```
@@ -82,4 +82,4 @@ To use a specific image, we recommend using their Sha-256 digest hash as an imag
 
 ## License
 
-See the [LICENSE](https://github.com/eisengrind/docker-altv-server/blob/master/LICENSE)-file for further information.
+See the [LICENSE](https://github.com/datweazel/docker-altv-server/blob/master/LICENSE)-file for further information.

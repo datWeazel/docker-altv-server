@@ -1,4 +1,4 @@
-module github.com/eisengrind/docker-altv-server/tools/configurator
+module github.com/datweazel/docker-altv-server/tools/configurator
 
 go 1.18
 

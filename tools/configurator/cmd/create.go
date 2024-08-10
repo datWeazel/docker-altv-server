@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/eisengrind/docker-altv-server/tools/configurator/config"
+	"github.com/datweazel/docker-altv-server/tools/configurator/config"
 	"github.com/spf13/cobra"
 	"log"
 )
