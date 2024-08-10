@@ -28,8 +28,11 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y jq wget
       - name: set script permissions
         run: chmod +x ./scripts/ci-push.sh ./scripts/image-build.sh ./scripts/image-push.sh  ./scripts/getVersion.sh
-      - name: login to DockerHub
-        run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+      - name: 'Login to DockerHub'
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{secrets.DOCKERHUB_PASSWORD}}
       - name: build dev
         run: ./scripts/ci-push.sh $IMAGE dev $(./scripts/getVersion.sh dev)
       - name: build rc
